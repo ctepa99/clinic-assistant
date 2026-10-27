@@ -1,0 +1,15 @@
+{
+  "name": "clinic-assistant",
+  "version": "1.0.0",
+  "description": "Текстовый ассистент клиники: запись к врачу, отмена и перенос, справки, передача оператору",
+  "type": "module",
+  "scripts": {
+    "start": "node cli.js",
+    "web": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

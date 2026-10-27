@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ассистент клиники</title>
+  <link rel="stylesheet" href="web/style.css">
+</head>
+<body>
+  <main class="chat">
+    <header class="chat__header">
+      <div class="chat__avatar" aria-hidden="true">+</div>
+      <div>
+        <h1 class="chat__title">Клиника «Здоровье»</h1>
+        <p class="chat__subtitle" id="status">Виртуальный ассистент · онлайн</p>
+      </div>
+      <button class="chat__restart" id="restart" type="button" title="Начать заново">↺</button>
+    </header>
+
+    <!-- Сюда app.js добавляет сообщения. aria-live — чтобы экранный диктор читал новые реплики. -->
+    <section class="chat__messages" id="messages" aria-live="polite"></section>
+
+    <!-- Быстрые ответы: кнопки отправляют готовый текст, как будто его напечатали. -->
+    <nav class="chat__quick" id="quick">
+      <button type="button" data-text="Записаться к врачу">Записаться</button>
+      <button type="button" data-text="Отменить запись">Отменить</button>
+      <button type="button" data-text="Перенести запись">Перенести</button>
+      <button type="button" data-text="Адрес">Адрес</button>
+      <button type="button" data-text="Цены">Цены</button>
+      <button type="button" data-text="Оператор">Оператор</button>
+    </nav>
+
+    <form class="chat__form" id="form" autocomplete="off">
+      <input class="chat__input" id="input" type="text" placeholder="Напишите сообщение…" aria-label="Сообщение">
+      <button class="chat__send" type="submit">Отправить</button>
+    </form>
+    <p class="chat__note">Демо: клиника и врачи вымышленные. Номер с готовыми записями: +7 900 123-45-67</p>
+  </main>
+
+  <script type="module" src="web/app.js"></script>
+</body>
+</html>
